@@ -160,3 +160,10 @@ dvTextareaCodemirrorJs.forEach(element => {
     let mode = element.getAttribute('mode')? element.getAttribute('data-mode'): 'text/javascript'
     CodeMirror.fromTextArea(element,dvObjectCodeMirror(mode));  
 });
+
+
+dvTextareaCodemirrorJs = document.querySelectorAll('.dv-textarea-codemirror-php textarea');
+dvTextareaCodemirrorJs.forEach(element => {
+    let mode = element.getAttribute('mode')? element.getAttribute('data-mode'): 'application/x-httpd-php'
+    CodeMirror.fromTextArea(element,dvObjectCodeMirror(mode));  
+});

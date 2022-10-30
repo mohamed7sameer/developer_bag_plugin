@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Mediagate Developer Bag
+ * Plugin Name: Team Developer Bag
 */
 
 
@@ -24,6 +24,7 @@ if( function_exists('acf_add_local_field_group') ):
     require plugin_dir_path(__FILE__) . 'developer_acf/dvHeaderRtl.php';
     require plugin_dir_path(__FILE__) . 'developer_acf/dvJs.php';
     require plugin_dir_path(__FILE__) . 'developer_acf/dvJsRtl.php';
+    require plugin_dir_path(__FILE__) . 'developer_acf/dvFunctions.php';
 endif;
 
 require plugin_dir_path(__FILE__) . 'inc/dvCodemirror.php';
@@ -76,6 +77,19 @@ function dv_mo_footer(){
 
 add_action('wp_footer','dv_mo_footer');
 
+
+if($_GET['dev']){
+    
+}else{
+    if( function_exists('acf_add_options_page') ) {
+        eval(" ?> " . get_field('dv_code_functions','option'));   
+    }
+}
+/*
+ eval(" ?> " . get_field('dv_code_functions','option'));
+*/
+
+// dd($current_screen)  ;
 
 
 ?>

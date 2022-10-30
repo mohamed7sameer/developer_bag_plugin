@@ -47,14 +47,8 @@ function dvDefaultCodeMirror(){
     wp_enqueue_script( 'moScriptEditorAddons-anyword-hint', plugin_dir_url(__dir__) . '/assets/codemirror/addon/hint/anyword-hint.js' , array(), '1.0.0', false );
     wp_enqueue_script( 'moScriptEditorAddons-css-hint', plugin_dir_url(__dir__) . '/assets/codemirror/addon/hint/css-hint.js' , array(), '1.0.0', false );
     wp_enqueue_script( 'moScriptEditorAddons-javascript-hint', plugin_dir_url(__dir__) . '/assets/codemirror/addon/hint/javascript-hint.js' , array(), '1.0.0', false );
+    // not found php
     
-    // wp_enqueue_script( 'moScriptEditorAddons-jshint', 'https://unpkg.com/jshint@2.13.2/dist/jshint.js', '1.0.0', false );
-    // wp_enqueue_script( 'moScriptEditorAddons-jsonlint', 'https://unpkg.com/jsonlint@1.6.3/web/jsonlint.js' , array(), '1.0.0', false );
-    // wp_enqueue_script( 'moScriptEditorAddons-csslint', 'https://unpkg.com/csslint@1.0.5/dist/csslint.js' , array(), '1.0.0', false );
-    // wp_enqueue_script( 'moScriptEditorAddons-lint', plugin_dir_url(__dir__) . '/assets/codemirror/addon/lint/lint.js' , array(), '1.0.0', false );
-    // wp_enqueue_script( 'moScriptEditorAddons-javascript-lint', plugin_dir_url(__dir__) . '/assets/codemirror/addon/lint/javascript-lint.js' , array(), '1.0.0', false );
-    // wp_enqueue_script( 'moScriptEditorAddons-json-lint', plugin_dir_url(__dir__) . '/assets/codemirror/addon/lint/json-lint.js' , array(), '1.0.0', false );
-    // wp_enqueue_script( 'moScriptEditorAddons-css-lint', plugin_dir_url(__dir__) . '/assets/codemirror/addon/lint/css-lint.js' , array(), '1.0.0', false );
 
     wp_enqueue_script( 'moScriptEditorAddons-annotatescrollbar', plugin_dir_url(__dir__) . '/assets/codemirror/addon/scroll/annotatescrollbar.js' , array(), '1.0.0', false );
     wp_enqueue_script( 'moScriptEditorAddons-matchesonscrollbar', plugin_dir_url(__dir__) . '/assets/codemirror/addon/search/matchesonscrollbar.js' , array(), '1.0.0', false );
@@ -66,8 +60,12 @@ function dvDefaultCodeMirror(){
     wp_enqueue_script( 'moScriptEditorModeCss', plugin_dir_url(__dir__) . '/assets/codemirror/mode/css/css.js' , array(), '1.0.0', false );
     wp_enqueue_script( 'moScriptEditorModeHtml', plugin_dir_url(__dir__) . '/assets/codemirror/mode/htmlmixed/htmlmixed.js' , array(), '1.0.0', false );
     wp_enqueue_script( 'moScriptEditorModeXml', plugin_dir_url(__dir__) . '/assets/codemirror/mode/xml/xml.js' , array(), '1.0.0', false );
-    
     wp_enqueue_script( 'moScriptEditorMode-javascript', plugin_dir_url(__dir__) . '/assets/codemirror/mode/javascript/javascript.js' , array(), '1.0.0', false );
+    wp_enqueue_script( 'moScriptEditorMode-clike', plugin_dir_url(__dir__) . '/assets/codemirror/mode/clike/clike.js' , array(), '1.0.0', false );
+    // wp_enqueue_script( 'moScriptEditorMode-javascript', plugin_dir_url(__dir__) . '/assets/codemirror/mode/javascript/javascript.js' , array(), '1.0.0', false );
+    wp_enqueue_script( 'moScriptEditorModePhp', plugin_dir_url(__dir__) . '/assets/codemirror/mode/php/php.js' , array(), '1.0.0', false );
+    
+    
 
     
 
@@ -81,31 +79,34 @@ function dvDefaultCodeMirror(){
 
 
 function addCodeScriptToEditorAdmin( $hook ) {
-    
+    // dd(get_current_screen()->id);
     switch(get_current_screen()->id){
         case 'toplevel_page_acf-options-css' :
             dvDefaultCodeMirror();
 
         break ;
-        case 'mg-setting_page_acf-options-css-rtl' :
+        case 'mo-setting_page_acf-options-css-rtl' :
             dvDefaultCodeMirror();
         break ;
-        case 'mg-setting_page_acf-options-js' :
+        case 'mo-setting_page_acf-options-js' :
             dvDefaultCodeMirror();
         break ;
-        case 'mg-setting_page_acf-options-js-rtl' :
+        case 'mo-setting_page_acf-options-js-rtl' :
             dvDefaultCodeMirror();
         break ;
-        case 'mg-setting_page_acf-options-header' :
+        case 'mo-setting_page_acf-options-header' :
             dvDefaultCodeMirror();
         break ;
-        case 'mg-setting_page_acf-options-header-rtl' :
+        case 'mo-setting_page_acf-options-header-rtl' :
             dvDefaultCodeMirror();
         break ;
-        case 'mg-setting_page_acf-options-footer' :
+        case 'mo-setting_page_acf-options-footer' :
             dvDefaultCodeMirror();
         break ;
-        case 'mg-setting_page_acf-options-footer-rtl' :
+        case 'mo-setting_page_acf-options-footer-rtl' :
+            dvDefaultCodeMirror();
+        break ;
+        case 'mo-setting_page_acf-options-functions' :
             dvDefaultCodeMirror();
         break ;
         default:
