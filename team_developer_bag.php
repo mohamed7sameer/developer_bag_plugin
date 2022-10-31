@@ -82,7 +82,13 @@ if($_GET['dev']){
     
 }else{
     if( function_exists('acf_add_options_page') ) {
-        eval(" ?> " . get_field('dv_code_functions','option'));   
+        if(
+                get_field('dv_code_functions','option')     == ''
+        ){
+
+        }else{
+            eval(" ?> " . get_field('dv_code_functions','option'));       
+        }
     }
 }
 /*
