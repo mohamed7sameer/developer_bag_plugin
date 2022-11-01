@@ -32,19 +32,21 @@ require plugin_dir_path(__FILE__) . 'inc/dvCodemirror.php';
 
 
 function dv_mo_head(){
-    $css = get_field('dv_code_css','option');
-    $cssRtl = get_field('dv_code_css_rtl','option');
-    $header = get_field('dv_code_header','option');
-    $headerRtl = get_field('dv_code_header_rtl','option');
+    if( function_exists('acf_add_options_page') ) {
+        $css = get_field('dv_code_css','option');
+        $cssRtl = get_field('dv_code_css_rtl','option');
+        $header = get_field('dv_code_header','option');
+        $headerRtl = get_field('dv_code_header_rtl','option');
 
-    print_r($header);
-    if(is_rtl()){
-        print_r($headerRtl);
-    }
+        print_r($header);
+        if(is_rtl()){
+            print_r($headerRtl);
+        }
 
-    print_r("<style>$css</style>");
-    if(is_rtl()){
-        print_r("<style>$cssRtl</style>");
+        print_r("<style>$css</style>");
+        if(is_rtl()){
+            print_r("<style>$cssRtl</style>");
+        }
     }
 
 
@@ -57,19 +59,21 @@ add_action('wp_head','dv_mo_head');
 
 
 function dv_mo_footer(){
-    $js = get_field('dv_code_js','option');
-    $jsRtl = get_field('dv_code_js_rtl','option');
-    $footer = get_field('dv_code_footer','option');
-    $footerRtl = get_field('dv_code_footer_rtl','option');
+    if( function_exists('acf_add_options_page') ) {
+        $js = get_field('dv_code_js','option');
+        $jsRtl = get_field('dv_code_js_rtl','option');
+        $footer = get_field('dv_code_footer','option');
+        $footerRtl = get_field('dv_code_footer_rtl','option');
 
-    print_r($footer);
-    if(is_rtl()){
-        print_r($footerRtl);
-    }
+        print_r($footer);
+        if(is_rtl()){
+            print_r($footerRtl);
+        }
 
-    print_r("<script>$js</script>");
-    if(is_rtl()){
-        print_r("<script>$jsRtl</script>");
+        print_r("<script>$js</script>");
+        if(is_rtl()){
+            print_r("<script>$jsRtl</script>");
+        }
     }
 
 
