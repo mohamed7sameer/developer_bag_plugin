@@ -14,6 +14,7 @@ acf_add_local_field_group(array(
             'label' => 'dv_code_functions',
             'name' => 'dv_code_functions',
             'type' => 'textarea',
+            'value' => '<?php ?>',
             'wrapper' => array(
                 'class' => 'dv-textarea-codemirror-php',
             ),
