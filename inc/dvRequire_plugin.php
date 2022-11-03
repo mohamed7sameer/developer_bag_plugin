@@ -72,6 +72,11 @@ function dvRequirePlugins() {
             'slug'               => 'bcm-duplicate-menu', 
             'required'           => true,
         ),
+        array(
+            'name'               => 'Seed Prod', 
+            'slug'               => 'coming-soon', 
+            'required'           => true,
+        ),
 
 
 
