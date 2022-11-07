@@ -82,7 +82,7 @@ function dv_mo_footer(){
 add_action('wp_footer','dv_mo_footer');
 
 
-if($_GET['dev']){
+if(isset($_GET['dev'])){
     
 }else{
     if( function_exists('acf_add_options_page') ) {
