@@ -33,7 +33,8 @@ let dvObjectCodeMirror = function(mode){
       theme: 'xq-dark',
       autoCloseBrackets: true,
       autoCloseTags: true,
-  
+      colorpicker : true,
+
       extraKeys: {
           'Ctrl-S' : function(cm){
               document.querySelector('#publish').click();

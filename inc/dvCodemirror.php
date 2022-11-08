@@ -13,6 +13,8 @@ function dvDefaultCodeMirror(){
     wp_enqueue_style( 'dv-codemirror-lint', plugin_dir_url(__dir__) . '/assets/codemirror/addon/lint/lint.css' );
     
 
+    wp_enqueue_style( 'dv-codemirror-colorpicker', plugin_dir_url(__dir__) . '/assets/codemirror/colorpicker/codemirror-colorpicker.css' );
+
 
     wp_enqueue_style( 'dv-codemirror', plugin_dir_url(__dir__) . '/assets/css/dv-codemirror.css' );
 
@@ -66,7 +68,7 @@ function dvDefaultCodeMirror(){
     wp_enqueue_script( 'moScriptEditorModePhp', plugin_dir_url(__dir__) . '/assets/codemirror/mode/php/php.js' , array(), '1.0.0', false );
     
     
-
+    wp_enqueue_script( 'moScript-codemirror-colorpicker', plugin_dir_url(__dir__) . '/assets/codemirror/colorpicker/codemirror-colorpicker.min.js' , array(), '1.0.0', false );
     
 
     
