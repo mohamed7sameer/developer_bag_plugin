@@ -30,11 +30,11 @@ function dvRequirePlugins() {
         ),
 
         
-        array(
-            'name'               => 'WP Custom Admin Interface', 
-            'slug'               => 'wp-custom-admin-interface', 
-            'required'           => true,
-        ),
+        // array(
+        //     'name'               => 'WP Custom Admin Interface', 
+        //     'slug'               => 'wp-custom-admin-interface', 
+        //     'required'           => true,
+        // ),
 
         array(
             'name'               => 'TranslatePress - Multilingual', 
