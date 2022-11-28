@@ -65,7 +65,8 @@ function dvDefaultCodeMirror(){
     wp_enqueue_script( 'moScriptEditorMode-javascript', plugin_dir_url(__dir__) . '/assets/codemirror/mode/javascript/javascript.js' , array(), '1.0.0', false );
     wp_enqueue_script( 'moScriptEditorMode-clike', plugin_dir_url(__dir__) . '/assets/codemirror/mode/clike/clike.js' , array(), '1.0.0', false );
     // wp_enqueue_script( 'moScriptEditorMode-javascript', plugin_dir_url(__dir__) . '/assets/codemirror/mode/javascript/javascript.js' , array(), '1.0.0', false );
-    wp_enqueue_script( 'moScriptEditorModePhp', plugin_dir_url(__dir__) . '/assets/codemirror/mode/php/php.js' , array(), '1.0.0', false );
+    // wp_enqueue_script( 'moScriptEditorModePhp', plugin_dir_url(__dir__) . '/assets/codemirror/mode/php/php.js' , array(), '1.0.0', false );
+    wp_enqueue_script( 'moScriptEditorModePhp', plugin_dir_url(__dir__) . '/assets/codemirror/mode/php/php-custom.js' , array(), '1.0.0', false );
     
     
     wp_enqueue_script( 'moScript-codemirror-colorpicker', plugin_dir_url(__dir__) . '/assets/codemirror/colorpicker/codemirror-colorpicker.min.js' , array(), '1.0.0', false );

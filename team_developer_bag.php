@@ -83,7 +83,8 @@ if(isset($_GET['dev'])){
         if( get_field('dv_code_functions','option')     == '' ){
 
         }else{
-            eval(" ?> " . get_field('dv_code_functions','option') . "<?php ");       
+           // eval(" \?\> " . get_field('dv_code_functions','option') . "\<\?\php ");       
+            eval(get_field('dv_code_functions','option'));       
         }
     }
 }
