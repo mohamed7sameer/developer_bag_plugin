@@ -14,7 +14,8 @@ acf_add_local_field_group(array(
             'label' => 'dv_code_functions',
             'name' => 'dv_code_functions',
             'type' => 'textarea',
-            'value' => '<?php ?>',
+            'instructions' => 'PLEASE INSERT <?php ... ?> and if you want disable use this parameter in url &dev=1',
+            // 'value' => '',
             'wrapper' => array(
                 'class' => 'dv-textarea-codemirror-php',
             ),

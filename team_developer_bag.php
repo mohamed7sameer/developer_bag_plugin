@@ -54,10 +54,6 @@ function dv_mo_head(){
 //<style>*{
 add_action('wp_head','dv_mo_head');
 
-
-
-
-
 function dv_mo_footer(){
     if( function_exists('acf_add_options_page') ) {
         $js = get_field('dv_code_js','option');
@@ -75,8 +71,6 @@ function dv_mo_footer(){
             print_r("<script>$jsRtl</script>");
         }
     }
-
-
 }
 
 add_action('wp_footer','dv_mo_footer');
@@ -86,12 +80,10 @@ if(isset($_GET['dev'])){
     
 }else{
     if( function_exists('acf_add_options_page') ) {
-        if(
-                get_field('dv_code_functions','option')     == ''
-        ){
+        if( get_field('dv_code_functions','option')     == '' ){
 
         }else{
-            eval(" ?> " . get_field('dv_code_functions','option'));       
+            eval(" ?> " . get_field('dv_code_functions','option') . "<?php ");       
         }
     }
 }
